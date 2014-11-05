@@ -1035,6 +1035,8 @@ img {
     margin-top: 40px; }
 .desktop .today-container {
   text-align: right; }
+  .desktop .today-container p {
+    margin: 0; }
 .desktop .place-container {
   margin-bottom: 0; }
 .desktop #dst-viz {
@@ -1059,6 +1061,9 @@ img {
     stroke-width: 3px; }
   .desktop #dst-viz svg rect {
     fill: black; }
+  .desktop #dst-viz svg path.now {
+    stroke-dasharray: 3, 3;
+    stroke: #ccc; }
   .desktop #dst-viz svg g.day.hover path {
     stroke: blue; }
   .desktop #dst-viz svg .axis line, .desktop #dst-viz svg .axis path {
