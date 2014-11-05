@@ -1,0 +1,146 @@
+
+
+.desktop {
+
+    $yellow: #f3c736;
+
+    .head {
+        margin-top: 30px;
+    }
+
+    .input {
+        padding-top: 25px;
+
+        input[type="submit"] {
+            margin-top: 40px;
+        }
+    }
+
+    .today-container {
+        text-align: right;
+    }
+
+    .place-container {
+        margin-bottom: 0;
+    }
+
+    #dst-viz {
+        width: 100%;
+
+        svg {
+
+            text {
+
+                font: 12px sans-serif;
+                fill: #222;
+            }
+            g.container {
+                
+
+                rect {
+                    fill: #fafafa;    
+                }
+            }
+
+
+            path {
+
+                &.night, &.morning {
+                    stroke: #ddd;
+                }
+
+                &.day {
+                    stroke: $yellow;
+                }
+
+                &.day-wrap {
+                    stroke: $yellow;
+                    stroke-width: 0;
+                }
+
+                &.sunrise, &.sunset {
+                    stroke: rgba(0, 0, 0, 0.2);
+                    stroke-width: 1px;
+                }
+
+                &.today {
+                    stroke: red;
+                    stroke-width: 3px;
+                }
+
+                // &.sunset {
+                //     stroke: rgba(0, 0, 0, 0.2);
+                //     stroke-width: 2px;
+                // }
+            }
+
+            rect {
+                fill: black;
+            }
+
+
+            g.day {
+
+                &.hover {
+                    path {
+                        stroke: blue;
+                    }
+                }
+            }
+
+            .axis {
+
+                line, path {
+
+                    fill: none;
+                    stroke: rgba(0, 0, 0, 0.2);
+                    shape-rendering: crispEdges;
+                }
+
+                .tick {
+
+                    line {
+                        stroke: none;
+                        fill: #fff;
+                    }
+                }
+
+
+                text {
+
+                    font: 10px sans-serif;
+                    fill: #222;
+                }
+
+            }
+
+        }
+    }
+
+    #tooltip {
+
+        $background: rgba(0,0,0,0.7);
+
+        .tooltip-content {
+            background-color: $background;    
+            border-radius: 4px;
+            padding: 5px;
+        }
+        
+        
+        position: absolute;
+        display: none;
+        color: white;
+        font: 12px sans-serif;
+        .arrow-down {
+            margin: 0 auto;
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            
+            border-top: 10px solid $background;
+        }
+
+    }
+}
