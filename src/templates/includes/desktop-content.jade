@@ -1,0 +1,72 @@
+// desktop content goes here
+.row.head
+    .column-12
+        h3
+            | Sunrise & Sunset Times
+        p.lead
+            small
+                | Times are shown relative to current timezone
+.row.place-container
+    .column-6
+        h4.place-name-container
+            | New York, NY, USA
+
+    //- .column-6.today-container
+        p.right
+            span.sunrise
+                | Today
+            br
+            span.sunset
+                | 3:15pm
+
+#dst-viz
+    #tooltip
+        .tooltip-content
+            .date
+            .sunrise-container
+                | Sunrise: 
+                span.sunrise
+            .sunset-container
+                | Sunset: 
+                span.sunset
+        .arrow-down
+
+
+.row.input
+    form#place-input-form
+        .column-3        
+            label
+                | Enter a location
+                br
+                | (e.g. 
+                a(href="#").viz-suggestion
+                    | alaska
+                | , 
+                a(href="#").viz-suggestion
+                    | london
+                | , 
+                a(href="#").viz-suggestion
+                    | finland
+                | , 
+                a(href="#").viz-suggestion
+                    | panama
+                | )  
+                input(type="text", value="NYC")#place-input
+        .column-3
+            input(type="submit")
+
+//- .row
+    .column-3
+        | Examples
+        ul
+            li
+                a(href="#").viz-suggestion
+                    | london
+            li
+                a(href="#").viz-suggestion
+                    | japan
+            li
+                a(href="#").viz-suggestion
+                    | london
+
+
