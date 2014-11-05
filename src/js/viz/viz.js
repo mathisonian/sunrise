@@ -194,6 +194,19 @@ function Viz($el) {
         .attr('y', self.y(12))
         .style('opacity', 0)
         .classed('sunset', true);
+
+
+
+    this.svg
+        .append('path')
+        .attr('d', function() {
+            return new Path()
+                .moveTo(self.x(0), self.y(today.getHours() + today.getMinutes() / 60))
+                .horizontalLineTo(self.x(max))
+                .end(); 
+        })
+        .classed('now', true);
+
     
 
 

@@ -18,6 +18,10 @@
 
     .today-container {
         text-align: right;
+
+        p {
+            margin: 0;
+        }
     }
 
     .place-container {
@@ -76,6 +80,11 @@
 
             rect {
                 fill: black;
+            }
+
+            path.now {
+                stroke-dasharray: 3, 3;
+                stroke: #ccc;
             }
 
 

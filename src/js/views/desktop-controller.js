@@ -18,7 +18,7 @@ function DesktopViewController($el, state) {
         // template variables go here
         // e.g.
         //
-        // someVar: something
+        STATIC_URL: './'
     }));
 
 

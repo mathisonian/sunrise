@@ -94,6 +94,8 @@ gulp.task('jade', function() {
     if(!PRODUCTION_MODE) {
         host = '/';
     }
+
+    host = './';
     
     return gulp.src('src/templates/index.jade')
                .pipe(jade({

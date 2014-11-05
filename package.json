@@ -21,9 +21,10 @@
   "license": "MIT",
   "dependencies": {
     "d3": "~3.4.6",
+    "geocoder": "mathisonian/geocoder",
     "inherits": "~2.0.1",
     "lodash": "~2.4.1",
-    "geocoder": "https://github.com/mathisonian/geocoder.git",
+    "suncalc": "^1.6.0",
     "svg-path-generator": "^1.0.0",
     "timezoner": "^0.1.9"
   },
