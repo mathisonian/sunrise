@@ -1063,7 +1063,7 @@ img {
     fill: black; }
   .desktop #dst-viz svg path.now {
     stroke-dasharray: 3, 3;
-    stroke: #ccc; }
+    stroke: #666; }
   .desktop #dst-viz svg g.day.hover path {
     stroke: blue; }
   .desktop #dst-viz svg .axis line, .desktop #dst-viz svg .axis path {
