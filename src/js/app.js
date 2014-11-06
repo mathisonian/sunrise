@@ -11,7 +11,7 @@
 var DesktopViewController = require('./views/desktop-controller');
 // var MobileViewController = require('./views/mobile-controller');
 var emitter = require('./emitter');
-// var _ = require('lodash');
+var _ = require('lodash');
 
 var desktopView = null;
 // var mobileView = null;
@@ -41,7 +41,7 @@ var draw = function() {
     // }
 };
 
-window.onresize = draw;
+window.onresize = _.throttle(draw, 400);
 draw();
 
 
