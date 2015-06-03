@@ -9,17 +9,12 @@
 
 
 var DesktopViewController = require('./views/desktop-controller');
-// var MobileViewController = require('./views/mobile-controller');
 var emitter = require('./emitter');
 var _ = require('lodash');
 
 var desktopView = null;
-// var mobileView = null;
-// var MOBILE_BREAKPOINT = 760;
 
 var $desktopEl = $('#desktopContent');
-// var $mobileEl = $('#mobileContent');
-
 
 var draw = function() {
     emitter.removeAllListeners();
@@ -29,16 +24,8 @@ var draw = function() {
         state = desktopView.getState();
         desktopView.destroy();
     }
-    // if(mobileView) {
-    //     mobileView.destroy();
-    // }
-
-    // if($(window).width() > MOBILE_BREAKPOINT) {
-        // console.log('drawing desktop');
-        desktopView = new DesktopViewController($desktopEl, state);
-    // } else {
-    //     mobileView = new MobileViewController($mobileView);
-    // }
+    
+    desktopView = new DesktopViewController($desktopEl, state);
 };
 
 window.onresize = _.throttle(draw, 400);
