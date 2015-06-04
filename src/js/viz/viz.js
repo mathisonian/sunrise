@@ -226,7 +226,6 @@ Viz.prototype.updatePlace = function(placeName) {
     geocoder.geocode(placeName, function(err, res) {
         
         if(err) {
-            alert('Error fetching coordinates of ' + placeName);
             return console.log(err);
         }
 
